@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b985ecf1-a4fa-48e7-827a-5a58ffb0fdbc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/branch2.txt" afterPath="$PROJECT_DIR$/branch2.txt" />
     </list>
     <ignored path="zkTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -793,7 +792,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2871000" />
+    <option name="totallyTimeSpent" value="2918000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-185" width="1920" height="1080" extended-state="6" />
