@@ -16,7 +16,7 @@ public class DeleteGroupTest {
 
 
     private static final String HOSTS = "127.0.0.1";
-    private static final String groupName = "zoo";
+    private static final String groupName = "zk_wanfan";
 
     private DeleteGroup deleteGroup = null;
 

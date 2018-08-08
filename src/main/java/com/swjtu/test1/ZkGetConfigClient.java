@@ -35,6 +35,7 @@ public class ZkGetConfigClient {
         });
         return config;
     }
+
     public static void main(String[] args) {
         ZkGetConfigClient client = new ZkGetConfigClient();
         client.getConfig();

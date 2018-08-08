@@ -21,7 +21,8 @@ public class ZkConfigMag {
      * 配置文件上传到数据库
      */
     public void upLoadConfigToDB(String nm, String pw){
-        if(config==null)config = new Config();
+        if(config==null)
+            config = new Config();
         config.setUserNm(nm);
         config.setUserPw(pw);
         //updateDB
