@@ -9,7 +9,7 @@ import java.util.List;
  * @author leo
  *
  */
-public class DeleteGroup extends ConnectionWatcher {
+public class DeleteNode extends ConnectionManager {
     public void delete(String groupName) {
         String path = "/" + groupName;
 
@@ -20,9 +20,11 @@ public class DeleteGroup extends ConnectionWatcher {
                 zk.delete(path + "/" + child, -1);
             }
             zk.delete(path, -1);//版本号为-1，
-        } catch (KeeperException e) {
+        }
+        catch (KeeperException e) {
             e.printStackTrace();
-        } catch (InterruptedException e) {
+        }
+        catch (InterruptedException e) {
             e.printStackTrace();
         }
     }

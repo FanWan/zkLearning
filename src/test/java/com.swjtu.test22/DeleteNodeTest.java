@@ -1,6 +1,6 @@
 package com.swjtu.test22;
 
-import com.swjtu.test2.DeleteGroup;
+import com.swjtu.test2.DeleteNode;
 import org.apache.zookeeper.KeeperException;
 import org.junit.After;
 import org.junit.Before;
@@ -11,19 +11,19 @@ import java.io.IOException;
 /**
  * Created by wanfan01 on 2018/8/2.
  */
-public class DeleteGroupTest {
+public class DeleteNodeTest {
 
 
 
     private static final String HOSTS = "127.0.0.1";
     private static final String groupName = "zk_wanfan";
 
-    private DeleteGroup deleteGroup = null;
+    private DeleteNode deleteGroup = null;
 
     @Before
     public void init() throws IOException, InterruptedException {
-        deleteGroup = new DeleteGroup();
-        deleteGroup.connection(HOSTS);
+        deleteGroup = new DeleteNode();
+        deleteGroup.connect(HOSTS);
     }
 
     @Test
@@ -33,15 +33,11 @@ public class DeleteGroupTest {
 
     @After
     public void destroy() throws InterruptedException {
-        if(null != deleteGroup){
-            try {
-                deleteGroup.close();
-            } catch (InterruptedException e) {
-                throw e;
-            }finally{
-                deleteGroup = null;
-                System.gc();
-            }
+        try {
+            deleteGroup.close();
+        }
+        catch (Exception e){
+            System.out.println(e.fillInStackTrace());
         }
     }
 }

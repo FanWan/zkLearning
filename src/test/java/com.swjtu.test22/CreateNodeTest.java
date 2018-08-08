@@ -1,7 +1,9 @@
 
 package com.swjtu.test22;
-import com.swjtu.test2.CreateGroup;
+import com.swjtu.test2.CreateNode;
+import com.swjtu.test2.Data;
 import org.apache.zookeeper.KeeperException;
+import org.apache.zookeeper.data.Stat;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.Before;
@@ -12,12 +14,12 @@ import java.io.IOException;
 /**
  * Created by wanfan01 on 2018/8/2.
  */
-public class CreateGroupTest {
+public class CreateNodeTest {
 
     private static String hosts = "127.0.0.1";
-    private static String groupName = "zk_wanfan";
+    private static String nodeName = "zk_wanfan";
 
-    private CreateGroup createGroup = null;
+    private CreateNode createNode = null;
 
     /**
      * init
@@ -27,13 +29,14 @@ public class CreateGroupTest {
      */
     @Before
     public void init() throws KeeperException, InterruptedException, IOException {
-        createGroup = new CreateGroup();
-        createGroup.connect(hosts);
+        createNode = new CreateNode();
+        createNode.connect(hosts);
     }
 
     @Test
     public void testCreateGroup() throws KeeperException, InterruptedException {
-        createGroup.create(groupName);
+        byte[] data = new Data("wan", "fan").objectToByteArray();
+        createNode.create(nodeName, data);
     }
 
     /**
@@ -42,11 +45,10 @@ public class CreateGroupTest {
     @After
     public void destroy() {
         try {
-            createGroup.close();
-            createGroup = null;
-            System.gc();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            createNode.close();
+        }
+        catch (Exception e){
+            System.out.println(e.fillInStackTrace());
         }
     }
 
