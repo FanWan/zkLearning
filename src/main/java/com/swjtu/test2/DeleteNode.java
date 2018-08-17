@@ -10,6 +10,8 @@ import java.util.List;
  *
  */
 public class DeleteNode extends ConnectionManager {
+
+
     public void delete(String groupName) {
         String path = "/" + groupName;
 
@@ -24,6 +26,7 @@ public class DeleteNode extends ConnectionManager {
         catch (KeeperException e) {
             e.printStackTrace();
         }
+
         catch (InterruptedException e) {
             e.printStackTrace();
         }
