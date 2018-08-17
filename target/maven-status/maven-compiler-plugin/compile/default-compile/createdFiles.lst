@@ -1,9 +1,0 @@
-com/swjtu/test1/Config.class
-com/swjtu/test1/ZkConfigTest.class
-com/swjtu/configCentor/Application.class
-com/swjtu/test1/ZkGetConfigClient.class
-com/swjtu/test1/ZkGetConfigClient$1.class
-com/swjtu/test2/DeleteGroup.class
-com/swjtu/test2/ConnectionWatcher.class
-com/swjtu/test1/ZkConfigMag.class
-com/swjtu/test2/CreateGroup.class
