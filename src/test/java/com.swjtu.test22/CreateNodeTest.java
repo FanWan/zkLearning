@@ -3,7 +3,6 @@ package com.swjtu.test22;
 import com.swjtu.test2.CreateNode;
 import com.swjtu.test2.Data;
 import org.apache.zookeeper.KeeperException;
-import org.apache.zookeeper.data.Stat;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.Before;
